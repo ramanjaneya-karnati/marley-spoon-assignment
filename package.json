@@ -1,0 +1,66 @@
+{
+  "name": "marley-spoon",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramanjaneya-karnati/marley-spoon-assignment.git"
+  },
+  "author": "Ramanjaneya Reddy ",
+  "homepage": "",
+  "dependencies": {
+    "@material-ui/core": "^4.2.0",
+    "@material-ui/icons": "^4.2.1",
+    "@material-ui/styles": "^4.2.0",
+    "axios": "^0.19.0",
+    "babel-polyfill": "^6.26.0",
+    "classnames": "^2.2.6",
+    "history": "^4.9.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "recompose": "^0.30.0",
+    "redux": "^4.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest --config jest.config.js --silent",
+    "test:watch": "jest --config jest.config.js --watch",
+    "eject": "react-scripts eject",
+    "format": "prettier-eslint --write 'src/**/*.js' 'src/*/!(node_modules)/**/*.js'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "jest-transform-stub": "^2.0.0",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "react-test-renderer": "^16.8.6",
+    "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.3"
+  }
+}

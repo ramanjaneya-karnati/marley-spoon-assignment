@@ -1,0 +1,39 @@
+.recipe-banner{
+    width: 1024px;
+    margin: 0 auto;
+}
+.recipe-information{
+    width: 1024px;
+}
+.recipe-description{
+    font-family: inherit;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.recipe-tags span{
+    background-color: #e8e8e8;
+    vertical-align: middle;
+    justify-content: center;
+    text-decoration: none;
+    display: inline-flex;
+    outline: none;
+    padding: 0.3rem;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 800;
+    margin-right: 5px;
+}
+.back-to-home{
+    position: fixed !important;
+    z-index: 19;
+    display: block;
+    fill: #fff;
+    transition: all .3s ease;
+    bottom: 25px;
+    right: 85px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(63, 66, 87, 0.4);
+    border-radius: 100%;
+    text-align: center;
+}
