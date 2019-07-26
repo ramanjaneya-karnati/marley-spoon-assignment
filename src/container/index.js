@@ -44,7 +44,7 @@ Container.propTypes = {
 };
 Container.defaultProps = {
   recipes: []
-}
+};
 const mapStateToProps = state => ({
   isLoading: state.isLoading,
   recipes: state.recipesData

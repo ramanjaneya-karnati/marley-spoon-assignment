@@ -2,9 +2,9 @@ import React from 'react';
 import { AppBar, CssBaseline, Toolbar } from '@material-ui/core';
 
 //Internals
-import {APP_LABELS} from '../../../constants';
+import { APP_LABELS } from '../../../constants';
 
-const Header= () => {
+const Header = () => {
   return (
     <div>
       <CssBaseline />

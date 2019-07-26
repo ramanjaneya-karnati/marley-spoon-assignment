@@ -15,7 +15,7 @@ export default store => next => action => {
   }
 };
 
-export const saveRecipeData = async (store) => {
+export const saveRecipeData = async store => {
   try {
     const [recipeResponse, tagsResponse, chefResponse] = await Promise.all([
       getRecipes(API_TYPE.RECIPES),
@@ -37,8 +37,7 @@ export const saveRecipeData = async (store) => {
         tagsResponse
       );
       store.dispatch(raiseAction(Actions.FETCH_RECIPE_DATA_SUCCESS, recipes));
-    }
-    else {
+    } else {
       throw new Error();
     }
   } catch (e) {

@@ -6,7 +6,7 @@ import createStore from './store';
 import './App.css';
 
 //Internals
-import {Header} from '../src/container/components'
+import { Header } from '../src/container/components';
 
 //Routing
 import { Router } from 'react-router-dom';
@@ -20,7 +20,7 @@ export default () => {
     <React.Fragment>
       <Provider store={store}>
         <Router history={browserHistory}>
-            <Header/>
+          <Header />
           <div className="recipe-container">
             <h2 className="recipe-label">Our weekly menu</h2>
             <Routes />

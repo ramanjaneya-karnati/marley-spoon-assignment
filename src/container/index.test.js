@@ -17,10 +17,9 @@ describe('Test Suite for container', () => {
     recipesData: recipesData,
     actions: {
       raiseAction: () => {}
-    },
+    }
     //onWeatherCardSelect: jest.fn()
   };
-
 
   it('Should call onRefreshClick when refresh button is clicked', () => {
     mountedComponent = shallow(<Container {...containerProps} />);
