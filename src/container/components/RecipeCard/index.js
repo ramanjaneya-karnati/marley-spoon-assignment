@@ -22,6 +22,7 @@ class RecipeCard extends Component {
             <CardActionArea>
               <CardMedia
                 alt={recipe.title}
+                id="recipeThumbnail"
                 component="img"
                 height="303"
                 image={`https:${recipe.imageUrl}`}
