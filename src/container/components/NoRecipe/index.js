@@ -5,11 +5,9 @@ import { Typography, Button, Grid } from '@material-ui/core';
 import { APP_LABELS } from '../../../constants';
 
 export default class NoRecipe extends React.Component {
-  redirectToHome = () => {
-    const { history } = this.props;
-    history.push('/');
-  };
+
   render() {
+    const { redirectToHome } = this.props;
     return (
       <Grid
         alignItems="center"
@@ -27,7 +25,7 @@ export default class NoRecipe extends React.Component {
           align="center"
           color="secondary"
           id="goBackButton"
-          onClick={this.redirectToHome}
+          onClick={redirectToHome}
           variant="outlined"
         >
           Recipes Page

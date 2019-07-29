@@ -29,19 +29,9 @@ export const saveRecipeData = async store => {
         chefResponse
       ])
     );
-
-    if (recipeResponse && tagsResponse && chefResponse) {
-      const recipes = transformRecipesData(
-        chefResponse,
-        recipeResponse,
-        tagsResponse
-      );
-      store.dispatch(raiseAction(Actions.FETCH_RECIPE_DATA_SUCCESS, recipes));
-    } else {
-      throw new Error();
-    }
+    const recipes = transformRecipesData(chefResponse, recipeResponse, tagsResponse);
+    store.dispatch(raiseAction(Actions.FETCH_RECIPE_DATA_SUCCESS, recipes));
   } catch (e) {
-    store.dispatch(raiseAction(Actions.FETCH_RECIPE_DATA_FAILURE, e));
-    throw new Error('API_ERROR');
+    store.dispatch(raiseAction(Actions.FETCH_RECIPE_DATA_FAILURE, 'Something went wrong, please try again...'));
   }
 };

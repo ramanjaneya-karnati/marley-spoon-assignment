@@ -14,14 +14,14 @@ describe('Test Suite for NoRecipe Component', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<NoRecipe />, div);
+    ReactDOM.render(<NoRecipe/>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   it('Should redirect to HomePage on button click', () => {
     const spy = jest.fn();
-    const wrapper = shallow(<NoRecipe history={historyMock} />);
+    const wrapper = shallow(<NoRecipe history={historyMock} redirectToHome={spy}/>);
     wrapper.find('#goBackButton').simulate('click');
-    expect(spy).toBeDefined();
+    expect(spy).toHaveBeenCalled();
   });
 });

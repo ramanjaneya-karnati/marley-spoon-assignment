@@ -1,33 +1,33 @@
 import React from 'react';
-import RecipeCard from './index';
+import { RecipeCard } from './index';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 
-import recipes from '../../../mockdata/recipes-data.json'
+import recipes from '../../../mockdata/recipes-data.json';
 
 describe('Recipe Card Test Suit', () => {
-let props;
-  beforeEach(()=>{
-     props={
+  let props;
+  beforeEach(() => {
+    props = {
       recipes,
-      viewRecipeDetailRouter: jest.fn()
-
-    }
-  })
+      viewRecipeDetailRouter: jest.fn(),
+      classes: {}
+    };
+  });
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(
-      <RecipeCard />,
-      div
-    );
+    ReactDOM.render(<RecipeCard {...props}/>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   it('Should simulate the recipe card', () => {
     const mockOnRecipeCard = jest.fn();
-    const wrapper = mount(<RecipeCard  {...props}/>);
-    wrapper.find('#recipeThumbnail').at(0).simulate('click');
-    expect(mockOnRecipeCard).toBeDefined()
-
-  })
-})
+    props.viewRecipeDetailRouter = mockOnRecipeCard;
+    const wrapper = mount(<RecipeCard {...props} />);
+    wrapper
+      .find('#recipeThumbnail')
+      .at(0)
+      .simulate('click');
+    expect(mockOnRecipeCard).toHaveBeenCalled();
+  });
+});

@@ -29,7 +29,7 @@ describe('Test Suite for reducers', () => {
   });
 
   it('Should return recipesData as `[]` when action is COMPONENT_INIT', () => {
-    expect(reducers.recipesData(state, action)).toEqual([]);
+    expect(reducers.recipes(state, action)).toEqual([]);
   });
 
   it('Should return recipesData with records when action is FETCH_RECIPE_DATA_SUCCESS', () => {
@@ -37,6 +37,6 @@ describe('Test Suite for reducers', () => {
       type: Actions.FETCH_RECIPE_DATA_SUCCESS,
       payload: { data: 'now' }
     };
-    expect(reducers.recipesData(state, action)).toEqual({ data: 'now' });
+    expect(reducers.recipes(state, action)).toEqual({ data: 'now' });
   });
 });

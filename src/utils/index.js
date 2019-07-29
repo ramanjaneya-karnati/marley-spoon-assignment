@@ -56,4 +56,12 @@ const getTagsName = tags => {
   return object;
 };
 
-export { transformRecipesData };
+const urlBuilder = (url) => {
+  // eslint-disable-next-line no-useless-escape
+  return url.replace(/(^\-+|[^a-zA-Z0-9\/_| -]+|\-+$)/g, '')
+    .toLowerCase()
+    // eslint-disable-next-line no-useless-escape
+    .replace(/[\/_| -]+/g, '-')
+  ;
+}
+export { transformRecipesData, urlBuilder };

@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
-import { Grid, Container, Fab } from '@material-ui/core';
+import { Grid, Container, Fab, withStyles } from '@material-ui/core';
 import { ArrowBackOutlined } from '@material-ui/icons';
 
 //Styles
-import './RecipeDetails.css';
+import styles from './styles';
 
-class RecipeDetails extends Component {
-  redirectToHome = () => {
-    const { history } = this.props;
-    history.push('/');
-  };
+export class RecipeDetails extends Component {
+
   render() {
-    const { recipeDetails } = this.props.location.state;
-    const recipeTags =
-      recipeDetails &&
-      recipeDetails.tags &&
-      recipeDetails.tags.map((tag, index) => <span key={index}>{tag}</span>);
-    console.log('RECIPE CHEF', recipeDetails);
+    const {
+      classes,
+      location: {
+        state: {
+          recipeDetails: {
+            title,
+            imageUrl,
+            description,
+            chefName,
+            tags
+          }
+        }
+      }
+    } = this.props;
+    const recipeTags = tags.map((tag, index) => <span className={classes.recipeTags} key={index}>{tag}</span>);
     return (
       <Container maxWidth="lg">
         <Grid
@@ -26,36 +32,35 @@ class RecipeDetails extends Component {
           justify="center"
         >
           <div className="recipe-title">
-            <h1>{recipeDetails.title}</h1>
+            <h1>{title}</h1>
           </div>
           <div className="recipe-banner">
             <div className="banner-wrapper">
               <img
                 alt=""
-                src={`https:${recipeDetails.imageUrl}`}
+                src={`https:${imageUrl}`}
               />
             </div>
           </div>
-          <div className="recipe-information">
-            <div className="recipe-description">
+          <div className={classes.recipeInformation}>
+            <div className={classes.recipeDescription}>
               <h2>Description</h2>
-              <p>{recipeDetails.description}</p>
+              <p>{description}</p>
             </div>
-            <div className="recipe-tags">{recipeTags}</div>
+            <div>{recipeTags}</div>
             <div className="recipe-chef">
-              {recipeDetails.chefName && (
-                <h3>Chef: {recipeDetails.chefName}</h3>
-              )}
+              {chefName && (<h3>Chef: {chefName}</h3>)}
             </div>
           </div>
         </Grid>
-        <div className="back-to-home">
+        <div className={classes.backToHome}>
           <Fab
             aria-label="edit"
             color="secondary"
-            onClick={this.redirectToHome}
+            onClick={this.props.redirectToHome}
+            id="goBackButton"
           >
-            <ArrowBackOutlined fontSize="default" />
+            <ArrowBackOutlined fontSize="default"/>
           </Fab>
         </div>
       </Container>
@@ -63,4 +68,4 @@ class RecipeDetails extends Component {
   }
 }
 
-export default RecipeDetails;
+export default withStyles(styles)(RecipeDetails);
