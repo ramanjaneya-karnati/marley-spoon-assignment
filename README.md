@@ -11,12 +11,7 @@
   <img align="left" width="300" height="300" src="https://firebasestorage.googleapis.com/v0/b/pairup-a03ed.appspot.com/o/Screen%20Shot%202019-07-28%20at%2012.48.36%20PM.png?alt=media&token=d2817d20-f436-429e-9db4-cdebaccbcf0a">  | <img align="left" width="200" height="300" src="https://firebasestorage.googleapis.com/v0/b/pairup-a03ed.appspot.com/o/Screen%20Shot%202019-07-28%20at%2012.53.17%20PM.png?alt=media&token=fad34ed3-0685-4d90-a2e1-0b65523b8bbd">  
   
   
- Desktop View             |
-  :-------------------------:
-  <img align="left" width="600" height="300" src="https://firebasestorage.googleapis.com/v0/b/pairup-a03ed.appspot.com/o/Screen%20Shot%202019-07-28%20at%2012.49.09%20PM.png?alt=media&token=9a708954-021d-4cb0-9cb0-7f1934d52c85">  |  
-  
   Code Coverage View             |
-    :-------------------------:
     <img align="left" width="600" height="300" src="https://firebasestorage.googleapis.com/v0/b/pairup-a03ed.appspot.com/o/Screen%20Shot%202019-07-28%20at%2010.03.36%20PM.png?alt=media&token=fa3966a5-a835-486d-9964-57c2eadfeed2">  |  
     
  ## Architectural decisions
